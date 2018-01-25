@@ -16,6 +16,21 @@ const masterTicketList = [
     names: 'Imani & Jacob',
     location: '9F',
     issue: 'Donkey picture not displaying on hover in Zoology app. :('
+  },
+  {
+    names: 'Imani & Jacob',
+    location: '9F',
+    issue: 'Donkey picture not displaying on hover in Zoology app. :('
+  },
+  {
+    names: 'Imani & Jacob',
+    location: '9F',
+    issue: 'Donkey picture not displaying on hover in Zoology app. :('
+  },
+  {
+    names: 'Imani & Jacob',
+    location: '9F',
+    issue: 'Donkey picture not displaying on hover in Zoology app. :('
   }
 ];
 
@@ -24,17 +39,22 @@ function TicketList(){
     backgroundStyle: {
       backgroundColor: 'bisque',
       fontFamily: 'sans-serif',
-      padding: '25px'
+      padding: '25px',
     },
     flexStyle: {
       display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center'
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      width:'50vw',
+      border: '2px solid black',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      marginTop: '100px',
+      justifyContent: 'space-around'
     }
-  }
+  };
   return (
     <div style={myStyledComponentStyles.flexStyle}>
-      <hr/>
       {masterTicketList.map((ticket, index) =>
         <Ticket names={ticket.names}
           location={ticket.location}
